@@ -7,7 +7,7 @@ The audio, after being decoded from alac, can be sent in plain, or re-encoded us
 
 ## Installing
 
-1. Pre-built binaries are in bin/ directory of this repository. You can download the whole repository as a zip file, clone it using git, or go to the [bin/ folder in the web interface](https://github.com/philippe44/AirConnect/tree/master/bin) and download the version that matches your OS. It's also possible to download files manually in a terminal by typing (e.g. for aircast arm version)<br/>`wget https://raw.githubusercontent.com/philippe44/AirConnect/master/bin/aircast-arm` 
+1. Pre-built binaries are in bin/ directory of this repository. You can download the whole repository as a zip file, clone it using git, or go to the [bin/ folder in the web interface](https://github.com/philippe44/AirConnect/tree/master/bin) and download the version that matches your OS. It's also possible to download files manually in a terminal by typing (e.g. for aircast arm version)<br/>`wget https://raw.githubusercontent.com/philippe44/AirConnect/master/bin/aircast-linux-arm` 
 
 	* For **Chromecast**, the file is `aircast-<platform>` (so `aircast-macos-x86_64` for Chromecast on MacOS + Intel CPU) 
 	* For **UPnP/Sonos**, the file is `airupnp-<platform>` (so `airupnp-macos-arm64` for UPnP/Sonos on MacOS + arm CPU) 
@@ -103,7 +103,7 @@ After=network-online.target
 Wants=network-online.target  
 
 [Service]  
-ExecStart=/var/lib/airconnect/airupnp-arm -l 1000:2000 -Z -x /var/lib/airconnect/airupnp.xml   
+ExecStart=/var/lib/airconnect/aircast-linux-arm -l 1000:2000 -Z -x /var/lib/airconnect/airupnp.xml   
 Restart=on-failure  
 RestartSec=30  
 
